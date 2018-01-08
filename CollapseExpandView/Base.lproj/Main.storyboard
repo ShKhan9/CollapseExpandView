@@ -1,24 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="45s-U9-sLX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="SRE-i6-y4c">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="45s-U9-sLX" customClass="ViewController" customModule="hghg" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vd0-el-zcc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjM-dc-bkJ">
+                                <rect key="frame" x="56.5" y="87" width="262.5" height="260"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="long text to wrap and simulate dynamic height and test collapse and expand behavior" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-Pa-oRI">
+                                        <rect key="frame" x="10" y="20" width="242.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rXH-li-g0t">
+                                        <rect key="frame" x="107" y="61" width="51" height="31"/>
+                                    </switch>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wy8-6w-8Po">
+                                        <rect key="frame" x="71" y="122" width="121" height="29"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MB-Ho-amr">
+                                        <rect key="frame" x="10" y="190" width="242" height="50"/>
+                                        <color key="backgroundColor" red="0.016919950023293495" green="0.84505563974380493" blue="0.98534780740737915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gWT-9C-VPW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.37257804459999999" blue="0.83407725880000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="wy8-6w-8Po" firstAttribute="centerX" secondItem="rXH-li-g0t" secondAttribute="centerX" id="4CY-UW-dPV"/>
+                                    <constraint firstAttribute="bottom" secondItem="0MB-Ho-amr" secondAttribute="bottom" constant="20" id="HZ5-1i-z0J"/>
+                                    <constraint firstItem="0MB-Ho-amr" firstAttribute="top" secondItem="wy8-6w-8Po" secondAttribute="bottom" constant="40" id="IY2-zV-cuG"/>
+                                    <constraint firstItem="0MB-Ho-amr" firstAttribute="leading" secondItem="YjM-dc-bkJ" secondAttribute="leading" constant="10" id="JOy-Vp-8a0"/>
+                                    <constraint firstItem="HzS-Pa-oRI" firstAttribute="top" secondItem="YjM-dc-bkJ" secondAttribute="top" constant="20" id="QkU-Gr-MEh"/>
+                                    <constraint firstItem="HzS-Pa-oRI" firstAttribute="centerX" secondItem="YjM-dc-bkJ" secondAttribute="centerX" id="cyq-TA-fw7"/>
+                                    <constraint firstAttribute="trailing" secondItem="0MB-Ho-amr" secondAttribute="trailing" constant="10" id="eF1-AA-5Aj"/>
+                                    <constraint firstItem="rXH-li-g0t" firstAttribute="centerX" secondItem="HzS-Pa-oRI" secondAttribute="centerX" id="goo-fR-HZQ"/>
+                                    <constraint firstItem="HzS-Pa-oRI" firstAttribute="leading" secondItem="YjM-dc-bkJ" secondAttribute="leading" constant="10" id="ocC-dW-YjZ"/>
+                                    <constraint firstItem="rXH-li-g0t" firstAttribute="top" secondItem="HzS-Pa-oRI" secondAttribute="bottom" constant="20" id="x7g-OY-dvv"/>
+                                    <constraint firstAttribute="trailing" secondItem="HzS-Pa-oRI" secondAttribute="trailing" constant="10" id="xoh-E4-orW"/>
+                                    <constraint firstItem="wy8-6w-8Po" firstAttribute="top" secondItem="rXH-li-g0t" secondAttribute="bottom" constant="30" id="z7c-QV-e5E"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N87-Ps-Fd8">
+                                <rect key="frame" x="158" y="49" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Collapse"/>
+                                <connections>
+                                    <action selector="expandClicked:" destination="45s-U9-sLX" eventType="touchUpInside" id="z2T-bB-wFF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="YjM-dc-bkJ" firstAttribute="width" secondItem="vd0-el-zcc" secondAttribute="width" multiplier="0.7" id="B6Y-IE-3Yf"/>
+                            <constraint firstItem="YjM-dc-bkJ" firstAttribute="centerX" secondItem="oVE-b6-hX0" secondAttribute="centerX" id="BX7-oy-f0c"/>
+                            <constraint firstItem="YjM-dc-bkJ" firstAttribute="top" secondItem="oVE-b6-hX0" secondAttribute="top" constant="67" id="y2t-LE-Tjc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oVE-b6-hX0"/>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="YjM-dc-bkJ" id="Eda-Ht-nAl"/>
+                        <outlet property="expandBu" destination="N87-Ps-Fd8" id="rHr-sf-FqX"/>
+                        <outlet property="lastView" destination="0MB-Ho-amr" id="myz-9Q-gOM"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wZR-f8-g6C" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
